@@ -1,0 +1,13 @@
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\bin\Debug\netcoreapp3.1\POS_Terminal.exe
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\bin\Debug\netcoreapp3.1\POS_Terminal.deps.json
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\bin\Debug\netcoreapp3.1\POS_Terminal.runtimeconfig.json
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\bin\Debug\netcoreapp3.1\POS_Terminal.runtimeconfig.dev.json
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\bin\Debug\netcoreapp3.1\POS_Terminal.dll
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\bin\Debug\netcoreapp3.1\POS_Terminal.pdb
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\obj\Debug\netcoreapp3.1\POS_Terminal.csprojAssemblyReference.cache
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\obj\Debug\netcoreapp3.1\POS_Terminal.AssemblyInfoInputs.cache
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\obj\Debug\netcoreapp3.1\POS_Terminal.AssemblyInfo.cs
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\obj\Debug\netcoreapp3.1\POS_Terminal.csproj.CoreCompileInputs.cache
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\obj\Debug\netcoreapp3.1\POS_Terminal.dll
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\obj\Debug\netcoreapp3.1\POS_Terminal.pdb
+C:\devbuild4\week6_POS_Terminal\POS_Terminal\obj\Debug\netcoreapp3.1\POS_Terminal.genruntimeconfig.cache
