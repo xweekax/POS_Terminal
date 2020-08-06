@@ -7,18 +7,6 @@ namespace XUnitTestPOS
 {
     public class UnitTest1
     {
-
-        /*
-         [Fact]
-        public void Test1()
-        {
-            int choice = 1;
-            ArrayList myList = new ArrayList();
-            PrimeNumbers.CreatePrimeList(myList);
-            Assert.Equal(2, PrimeNumbers.GetPrime(myList, choice));
-
-        }
-        */
         [Fact]
         public void itemSelectTest()
         {
@@ -30,20 +18,12 @@ namespace XUnitTestPOS
 
             Assert.Equal(Apple, storeInventory.inventory[0]);
             Assert.Equal(Pear, storeInventory.inventory[1]);
-
-            //Testing ideas
-            //Adding a product with the same name "Apple"
-            //What do we do here, when more than 1 of the same object comes up.
-
-            //Build test, run - fail
-            //Modify to do what we need it to do
-
-            //Isolate a class, it should be doing one thing.
             
         }
         [Fact]
         public void cartContents()
         {
+            shoppingCart.fullCart.Clear();
             product Pear = new product("Pear", "Produce", "Fruit", 1.50m);
             shoppingCart.fullCart.Add(Pear);
 
@@ -51,24 +31,55 @@ namespace XUnitTestPOS
         }
         
         [Fact]
-        public void lineTotalTest()
+        public void cartTaxesTest()
         {
+            shoppingCart.fullCart.Clear();
+            product Pear = new product("Pear", "Produce", "Fruit", 1.50m);
+            shoppingCart.fullCart.Add(Pear);
+            product Apple = new product("Apple", "Produce", "Fruit", 2.50m);
+            shoppingCart.fullCart.Add(Apple);
 
+            Assert.Equal(0.24m, shoppingCart.Taxes(shoppingCart.cartTotal()));
         }
-        /*
-                 [Fact]
-        public void calculateTotals()
-        {
-
-        } */
+        
         [Fact]
-        public void calculaateChange()
+        public void cartTotalTest()
         {
+            shoppingCart.fullCart.Clear();
+            product Pear = new product("Pear", "Produce", "Fruit", 1.50m);
+            shoppingCart.fullCart.Add(Pear);
+            product Apple = new product("Apple", "Produce", "Fruit", 2.50m);
+            shoppingCart.fullCart.Add(Apple);
 
+            Assert.Equal(4.00m, shoppingCart.cartTotal());
+        } 
+        
+        [Fact]
+        public void totalWithTaxTest()
+        {
+            shoppingCart.fullCart.Clear();
+            product Pear = new product("Pear", "Produce", "Fruit", 1.00m);
+            shoppingCart.fullCart.Add(Pear);
+
+            Assert.Equal(1.06m, shoppingCart.totalWithTax());
         }
+        
         [Fact]
-        public void finalProduct()
+        public void finalReceiptTest() //test the final receipt to see what happens when you add more than 1 of an item to the list
         {
+            shoppingCart.fullCart.Clear();
+            product Pear = new product("Pear", "Produce", "Fruit", 1.00m);
+            shoppingCart.fullCart.Add(Pear);
+            product Apple = new product("Apple", "Produce", "Fruit", 2.00m);
+            shoppingCart.fullCart.Add(Apple);
+            shoppingCart.fullCart.Add(Apple);
+            product Tire = new product("Tire", "Not Produce", "Car Stuff", 200.00m);
+            shoppingCart.fullCart.Add(Tire);
+
+            Assert.Equal(Pear, shoppingCart.fullCart[0]);
+            Assert.Equal(Apple, shoppingCart.fullCart[1]);
+            Assert.Equal(Apple, shoppingCart.fullCart[2]);
+            Assert.Equal(Tire, shoppingCart.fullCart[3]);
 
         }
     }
